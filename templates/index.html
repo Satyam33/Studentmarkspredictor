@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Mark Predictor ML app</title>
+    <style>
+
+        h1{color:blue;}
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="Static\image\gtu.jpg" class="w3-border w3-padding" alt="" style="" >
+
+    </div>
+    <div class="login">
+        <center>
+            <form action="{{url_for('predict')}}" method="post">
+                <h1>***Enter Your Study hours To Predict Marks ***</h1>
+                <input align="center" type="number" name="study_hours" placeholder="study hours" required="required" width="48">
+                <br>
+
+                <br>
+                <div class="button cont" align="center" >
+                    <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Marks</strong></button>
+                </div>
+            </form>
+        </center>
+        <div>
+            <center>
+                <h2>{{ prediction_text }}</h2>
+            </center>
+        </div>
+
+    </div>
+
+</body>
+</html>
